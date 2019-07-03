@@ -120,11 +120,7 @@ vwReg <- function(formula, data, title="", B=1000, shade=TRUE, shade.alpha=.1, s
     }
   }
   
-  # Confidence limits
-  if (show.CI == TRUE) {
-    gg.CI1 <- geom_path(data=CI.boot, aes(x=x, y=UL), size=1, color="red")
-    gg.CI2 <- geom_path(data=CI.boot, aes(x=x, y=LL), size=1, color="red")
-  }
+ 
   
   # plain linear regression line
   if (show.lm==TRUE) {gg.lm <- geom_smooth(method="lm", color="darkgreen", se=FALSE)}
